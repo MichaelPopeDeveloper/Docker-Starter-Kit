@@ -1,0 +1,26 @@
+version: '2'
+services:
+  reverse-proxy-1:
+    image: "test-reverse-proxy"
+    container_name: test-reverse-proxy
+    ports:
+      - "80:80"
+    restart: always
+    tty: true
+    stdin_open: true
+  nodejs1:
+    image: "test-node"
+    container_name: nodejs1
+    ports:
+      - "3000:3000"
+    restart: always
+    tty: true
+    stdin_open: true
+  python1:
+    image: "python-app"
+    container_name: python-app
+    ports:
+      - "5000:5000"
+    restart: always
+    tty: true
+    stdin_open: true
