@@ -1,1 +1,5 @@
 /sample-nodejs-app/node_modules
+/apps
+/nginix
+/Portfolio_Website/Backend/node_modules
+/Portfolio_Website/Frontend/Portfolio_Frontend/node_modules

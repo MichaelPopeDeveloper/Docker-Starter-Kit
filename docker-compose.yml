@@ -1,7 +1,8 @@
 version: '2'
 services:
   reverse-proxy-1:
-    image: "test-reverse-proxy"
+    network_mode: "host"
+    image: "proxy2"
     container_name: test-reverse-proxy
     ports:
       - "80:80"
@@ -9,7 +10,8 @@ services:
     tty: true
     stdin_open: true
   nodejs1:
-    image: "test-node"
+    network_mode: "host"
+    image: "node-app1"
     container_name: nodejs1
     ports:
       - "3000:3000"
@@ -17,7 +19,8 @@ services:
     tty: true
     stdin_open: true
   python1:
-    image: "python-app"
+    network_mode: "host"
+    image: "python1"
     container_name: python-app
     ports:
       - "5000:5000"
